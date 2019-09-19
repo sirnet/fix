@@ -26,6 +26,8 @@ $(function(){
     let formAction = document.getElementById("form-action");
     let btnAction = document.getElementById("btn-action");
     let closeForm = document.getElementById("close-form");
+    let btnClose = document.getElementById("btn_click");
+
 
     btnPosition.onclick =  function(){
         btnPosition.classList.add("btn-action");
@@ -35,11 +37,24 @@ $(function(){
     btnAction.onclick =  function(){
         btnPosition.classList.add("btn-action");
         formAction.classList.remove("form__main-action")
-}
+    }
     closeForm.onclick = function() {
         formAction.classList.remove("form__main-action")
         btnPosition.classList.remove("btn-action");
     }
     
+    btnClose.onclick =  function(){
+        btnClose.classList.add("btn-action");
+        formAction.classList.add("form__main-action")
+    }
+
+    btnAction.onclick =  function(){
+        btnClose.classList.add("btn-action");
+        formAction.classList.remove("form__main-action")
+    }
+    closeForm.onclick = function() {
+        formAction.classList.remove("form__main-action")
+        btnClose.classList.remove("btn-action");
+    }
 
 });

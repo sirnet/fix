@@ -377,7 +377,8 @@ picture {
 }
 
 .guarantee__btn {
-    right: -450px;
+    right: 10%;
+    bottom: -150px;
 }
 
 .btn__position {
@@ -390,10 +391,15 @@ picture {
     display: none;
     position: absolute;
     bottom: 0;
-    right: 300px;
+    right: 10%;
     width: 400px;
     height: 375px;
     background: #ffffff;
+    transition: .3s all;
+}
+
+.btn__main {
+    right: 300px;
 }
 
 .form__main-group {
@@ -559,6 +565,7 @@ picture {
 
 .wrap__services {
     height: 100%;
+    margin-left: 0;
 }
 
 .model__list {
@@ -633,8 +640,9 @@ picture {
 }
 
 .btn__services {
-    position: relative;
-    margin-top: 25px;
+    position: absolute;
+    right: 10%;
+    bottom: -150px;
 }
 
 .table__list input{
@@ -741,7 +749,8 @@ textarea:focus, input:focus{
 }
 
 .guarantee__btn {
-    position: relative;
+    position: absolute;
+    bottom: 0px;
 }
 
 .container__right {
@@ -959,6 +968,14 @@ textarea:focus, input:focus{
     font-size: 16px;
 }
 
+.articles__info {
+    font-size: 16px;
+}
+
+.articles__list .faq__item {
+    margin-bottom: 25px;
+}
+
 
 /* ---------------------- */
 @media (max-width:1500px) {
@@ -992,6 +1009,9 @@ textarea:focus, input:focus{
 
     .main__wrap-stocks {
         margin-left: 0;
+    }
+    .articles__btn {
+        bottom: -130px;
     }
 }
 /*
@@ -1174,10 +1194,6 @@ textarea:focus, input:focus{
         margin-left: 50px;
     }
 
-    .main__wrap-guarant {
-        
-    }
-
     .modal__img {
         width: 300px;
         height: 300px;
@@ -1194,6 +1210,21 @@ textarea:focus, input:focus{
         position: absolute;
         right: 0;
         bottom: 0;
+    }
+
+    .form__faq {
+        right: 10%;
+    }
+
+    .articles__btn {
+        bottom: -130px;
+    }
+
+    .guarantee__btn {
+        margin-top: 0;
+        position: absolute;
+        bottom: -600px;
+        right: 10%;
     }
 }
 
@@ -1277,8 +1308,7 @@ textarea:focus, input:focus{
     }
 
     .guarantee__btn {
-        right: unset;
-        margin-top: 20px;
+        bottom: -600px;
     }
 
     .burger__list {
@@ -1335,6 +1365,10 @@ textarea:focus, input:focus{
         position: absolute;
         right: 0;
         bottom: 0;
+    }
+
+    .form__faq {
+        right: 10%;
     }
 }
 
@@ -1534,8 +1568,8 @@ textarea:focus, input:focus{
     }
 
     .guarantee__list {
-        width: 320px;
-        margin-left: -20px;
+        width: 300px;
+        margin-left: -10px;
         margin-bottom: 120px;
     }
 
@@ -1589,7 +1623,6 @@ textarea:focus, input:focus{
         padding-top: 25px;
         padding-bottom: 25px;
         margin-top: -70px;
-        margin-left: -20px;
         position: relative;
     }
 
@@ -1689,6 +1722,14 @@ textarea:focus, input:focus{
 
     .form__main .btn__position {
         bottom: -100px;
+    }
+
+    .articles__list .faq__img{
+        width: 300px;
+    }
+
+    .articles__btn {
+        bottom: -130px;
     }
 }
 
