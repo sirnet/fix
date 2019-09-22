@@ -336,7 +336,7 @@ picture {
 
 .main__scroll, .scroll__services {
     position: absolute;
-    bottom: 15%;
+    bottom: 25%;
     left: 40%;
     z-index: 5;
 }
@@ -734,7 +734,7 @@ textarea:focus, input:focus{
     margin-left: 0;
     margin-top: 0;
     top: 0;
-    height: 1500px;
+    height: 100%;
 }
 
 .modal__tittle {
@@ -755,7 +755,6 @@ textarea:focus, input:focus{
     list-style: none;
     flex-wrap: wrap;
     scrollbar-width: none;
-    height: 800px;
     padding: 0;
 }
 
