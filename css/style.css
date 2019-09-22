@@ -55,7 +55,7 @@ body {
 }
 
 .burger__list {
-    position: absolute;
+    position: fixed;
     display: block;
     top: 100px;
     right: 100px;
@@ -89,18 +89,18 @@ body {
 
 .menu__wrap--active {
     visibility: hidden;
-    position: absolute;
+    position: fixed;
     width: 500px;
     height: 100vh;
     background: #000000;
-    top: -2000px;
+    right: -2000px;
     z-index: 4;
     transition: .5s all;
 }
 
 #check-menu:checked ~ .menu__wrap--active{
     visibility: unset;
-    top: 0px;
+    right: 0px;
 }
 
 .second--active {
@@ -137,24 +137,33 @@ body {
     z-index: 1;
 }
 
+.menu__item {
+    width: 0;
+    
+}
+
 .menu__item:nth-child(1):hover span{
     width: 225px;
+    
 }
+
 .menu__item:nth-child(2):hover span{
-    width: 275px;
-}
-.menu__item:nth-child(3):hover span{
     width: 165px;
 }
-.menu__item:nth-child(4):hover span{
+.menu__item:nth-child(3):hover span{
     width: 210px;
 }
-.menu__item:nth-child(5):hover span{
+.menu__item:nth-child(4):hover span{
     width: 225px;
 }
 
-.menu__item:nth-child(6):hover span{
+.menu__item:nth-child(5):hover span{
     width: 255px;
+}
+
+.menu__item span {
+    width: 0;
+    margin-top: 22px;
 }
 
 .menu__item:hover span {
@@ -166,6 +175,7 @@ body {
     width: 100%;
     margin-top: 22px;
     z-index: 1;
+    transition: 0.6s all;
 }
 
 .menu__contact {
@@ -240,18 +250,26 @@ body {
     color: #000000;
 }
 
-.aside__link--active span {
+.scroll-active {
+    color: #000000;
+}
+
+.scroll-active span{
+    text-decoration: none;
     display: block;
     width: 31px;
     height: 6px;
+    border-bottom: 1px solid #000000;
     margin-right: 6px;
     margin-left: 6px;
-    border-bottom: 1px solid #000000;
 }
+
+
 
 .aside__link span {
     display: block;
     width: 31px;
+    
     height: 6px;
 }
 
@@ -276,10 +294,11 @@ body {
 }
 
 .main__wrap {
+    height: 100vh;
     margin-left: 100px;
     position: relative;
-    transition: .5s all;
-    
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .wrap__height {
@@ -315,10 +334,11 @@ picture {
     margin-left: -100px;
 }
 
-.main__scroll {
+.main__scroll, .scroll__services {
     position: absolute;
-    bottom: 25%;
-    left: 50%;
+    bottom: 15%;
+    left: 40%;
+    z-index: 5;
 }
 
 .owl-stage-outer {
@@ -366,14 +386,30 @@ picture {
     height: 100px;
     background: #ffffff;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
     letter-spacing: 3.6px;
     border: none;
-    position: absolute;
+    position: fixed;
     z-index: 3;
     bottom: 0;
-    right: 10%;
+    right: 300px;
     display: block;
+}
+
+.footer__bth::after {
+    margin-left: 5px;
+    content: url(../image/ico/ico__black.png);
+    width: 5px;
+    height: 8px;
+    top: 10px;
+    right: 10px;
+}
+
+.footer__bth:hover {
+    background: #d8d8d8;
+    cursor: pointer;
 }
 
 .guarantee__btn {
@@ -382,20 +418,21 @@ picture {
 }
 
 .btn__position {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 300px;
 }
 
 .form__main {
     display: none;
-    position: absolute;
-    bottom: 0;
+    position: fixed;
     right: 10%;
     width: 400px;
     height: 375px;
+    bottom: 0;
     background: #ffffff;
-    transition: .3s all;
+    margin-bottom: 100px;
+    
 }
 
 .btn__main {
@@ -409,16 +446,24 @@ picture {
 .form__main .btn__position {
     width: 400px;
     height: 100px;
-    position: absolute;
-    left: 0;
+    position: fixed;
+    bottom: 0;
+    right: 300px;
     bottom: 0;
     z-index: 4;
     background-color: #ff9100;
-    
 }
 
 .form__main-group .form-control {
     border: none;
+}
+
+.form-control {
+    font-size: 20px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-weight: 300;
+    color: #c3c3c3;
 }
 
 .form__main-group {
@@ -426,9 +471,21 @@ picture {
     margin-top: 40px;
 }
 
-.form__main-action {
-    display: block;
+.form__main-group label {
+    color: #000000;
+    font-size: 12px;
 }
+
+.form__main-action {
+    display: inline-block;
+    z-index: 4;
+    bottom: 0;
+}
+
+@keyframes show{
+    0%{ opacity:0; }
+    100% { opacity:1; }
+   }
 
 .btn-action {
     display: none;
@@ -438,11 +495,12 @@ picture {
     margin-top: 0;
     padding: 0;
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: -35px;
+    top: 0px;
     list-style: none;
     width: 21px;
     height: 21px;
+    cursor: pointer;
 }
 
 .close__item {
@@ -450,7 +508,7 @@ picture {
     background: #000;
     position: absolute;
     top: 10px;
-    width: 20px;
+    width: 30px;
 }
 
 .close__item:nth-child(1){
@@ -557,6 +615,11 @@ picture {
     margin-top: 20px;
     background-size: contain;
     margin: 0 auto;
+    cursor: pointer;
+}
+
+.services__item--active {
+    border: 1px solid #ff9100;
 }
 
 .service__info-img {
@@ -565,18 +628,22 @@ picture {
 
 .wrap__services {
     height: 100%;
-    margin-left: 0;
+    margin-left: 100px;
 }
 
 .model__list {
+    display: none;
     max-width: 1200px;
     margin: 0;
     padding: 0;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
     margin-bottom: 10px;
+}
+
+.model__list--active {
+    display: flex;
 }
 
 .model__item {
@@ -603,6 +670,7 @@ picture {
     margin: 0;
     margin-bottom: 1px;
     position: relative;
+    visibility: hidden;
 }
 
 .table__position {
@@ -660,12 +728,13 @@ textarea:focus, input:focus{
 /* Результаты работы gallery */
 
 .main__modal-gallery {
-    
     display: flex;
     flex-direction: column;
-    position: absolute;
-    margin-left: 100px;
-    transition: .5s all;
+    position: relative;
+    margin-left: 0;
+    margin-top: 0;
+    top: 0;
+    height: 1500px;
 }
 
 .modal__tittle {
@@ -696,15 +765,17 @@ textarea:focus, input:focus{
 }
 
 .main__modal-gallery--active{
-    transition: .9s all;
-    margin-top: -5000px;
+   display: none;
 }
 
 .main__wrap--active{
-    margin-top: -5000px;
-    transition: .9s all;
+    display: none;
+    
 }
 
+.main__gallery {
+    height: 100%;
+}
 
 /* ___________________ */
 
@@ -785,7 +856,7 @@ textarea:focus, input:focus{
 }
 
 .main__stocks .main__img {
-    width: 100%;
+    width: 90%;
     bottom: 0;
 }
 
@@ -837,12 +908,21 @@ textarea:focus, input:focus{
 .faq__info {
     width: 700px;
 }
+
+.articles__list {
+    margin-bottom: 150px;
+}
 /* ------------------------------- */
 
 /* Наши контакты contacts */
 
+.main__contakt {
+    margin-bottom: 0;
+}
+
 .contact__img {
-    position: fixed;
+    width: 100%;
+    position: relative;
     display: block;
     z-index: 2;
     right: 0;
@@ -857,13 +937,16 @@ textarea:focus, input:focus{
     padding: 0;
     display: flex;
     flex-direction: row;
-    
-    margin-top: 150px;
+    align-items: center;
 }
 
 .contact__item:nth-child(1) {
     margin-right: 150px;
     width: 490px;
+}
+
+.contact__item:nth-child(2) {
+    width: 100%;
 }
 
 .contact__tittle {
@@ -903,7 +986,7 @@ textarea:focus, input:focus{
     display: flex;
     list-style: none;
     padding: 0;
-    position: fixed;
+    position: absolute;
     top: 150px;
     right: 100px;
     z-index: 3;
@@ -916,6 +999,7 @@ textarea:focus, input:focus{
 }
 
 .btn-contact {
+    position: relative;
     width: 500px;
     height: 64px;
     background-color: #c3c3c3;
@@ -925,6 +1009,15 @@ textarea:focus, input:focus{
     color: #ffffff;
     letter-spacing: 3.6px;
     font-weight: 700;
+    font-size: 12px;
+}
+
+.btn-contact::after {
+    content: url(../image/ico/ico-right.png);
+    width: 5px;
+    height: 8px;
+    top: 10px;
+    right: 10px;
 }
 
 .contact-form__item {
@@ -976,6 +1069,32 @@ textarea:focus, input:focus{
     margin-bottom: 25px;
 }
 
+.scrollup{
+    width:40px;
+    height:40px;
+    opacity:0.3;
+    position:fixed;
+    bottom:40px;
+    right:100px;
+    display:none;
+    text-indent:-9999px;
+    background: url('../image/ico/icon_top.png') no-repeat;
+    z-index: 7;
+    }
+
+    .go_to_top {
+        width:40px;
+        height:40px;
+        opacity:0.3;
+        position:fixed;
+        bottom:40px;
+        left: 300px;
+        display:none;
+        text-indent:-9999px;
+        background: #f2f2f2;
+        background: url('../image/ico/icon_top.png') no-repeat;
+        z-index: 7; 
+    }
 
 /* ---------------------- */
 @media (max-width:1500px) {
@@ -1114,6 +1233,7 @@ textarea:focus, input:focus{
     .footer__bth {
         right: 10%;
         margin-top: 20px;
+        cursor: pointer;
     }
 
     .burger__list {
@@ -1301,10 +1421,6 @@ textarea:focus, input:focus{
 
     .main__tittle, .modal__tittle {
         font-size: 35px;
-    }
-
-    .main__info {
-       /* width: 580px; */
     }
 
     .guarantee__btn {
@@ -1536,16 +1652,15 @@ textarea:focus, input:focus{
     }
 
     .main__modal-gallery--active{
-        transition: .9s all;
         margin-top: 0;
-        margin-left: -2000px;
+        
         display: none;
     }
     
     .main__wrap--active{
-        margin-top: -2000px;
+        
         margin-left: 0;
-        transition: .9s all;
+        
         display: block;
     }
 
@@ -1686,10 +1801,6 @@ textarea:focus, input:focus{
 
     .modal__item {
         margin-right: 0;
-    }
-
-    .main__wrap--active{
-        margin-top: -5000px;
     }
 
     .form__main {

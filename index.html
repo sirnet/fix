@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FixPhone - ремонт телефонов в Пензе</title>
+    <script src="js/assets/jquery/jquery.min.js"></script>
     <link rel="stylesheet" href="js/assets/owl.carousel/dist/assets/owl.theme.green.css">
     <link rel="stylesheet" href="css/blocks/normalize.css">
     <link rel="stylesheet" href="css/blocks/animate.css">
@@ -26,51 +27,46 @@
                 <div class="menu__wrap--active">
                     <ul class="menu__list">
                         <li class="menu__item"><span></span>
-                            <a href="index.html" class="menu__link">Главная</a></li>
-                        <li class="menu__item"><span></span>
-                            <a href="" class="menu__link">Наши цены</a></li>
+                            <a href="index.html#index" class="menu__link">Главная</a></li>
                         <li class="menu__item"><span></span>
                             <a href="faq.html" class="menu__link">FAQ</a></li>
                         <li class="menu__item"><span></span>
                             <a href="articles.html" class="menu__link">Статьи</a></li>
                         <li class="menu__item"><span></span>
-                            <a href="gallery.html" class="menu__link">Галерея</a></li>
+                            <a href="index.html#gallery" class="menu__link">Галерея</a></li>
                         <li class="menu__item"><span></span>
-                            <a href="contact.html" class="menu__link">Контакты</a></li>
+                            <a href="index.html#contact" class="menu__link">Контакты</a></li>
                     </ul>
                     <div class="menu__contact">
                         <h4 class="menu__phone">Телефон // +7(8412)24-28-17</h4>
                         <p class="menu__address">адрес // г. Пенза, ул. Суворова, 139</p>
                     </div>
                 </div>
-            
+                
             </div>
         </nav>
     </header>
     <aside class="left__menu">
-        <div class="aside__wrap">
+        <div class="aside__wrap" id="menu-center">
             <img src="image/logo.png" alt="Ремонт телефонов в Пензе" class="menu__logo">
             <ul class="aside__list">
                 <li class="aside__item">
-                    <a href="index.html" class="aside__link aside__link--active">01 <span></span> главная</a>
+                    <a href="#index" class="aside__link scroll-active" data-click="infex">01 <span></span> главная</a>
                 </li>
                 <li class="aside__item aside__navigation">
-                    <a href="services.html" class="aside__link">02 <span></span> наши услуги</a>
+                    <a href="#services" class="aside__link" data-click="services">02 <span></span> наши услуги</a>
                 </li>
                 <li class="aside__item">
-                    <a href="guarantee.html" class="aside__link">03 <span></span> гарантия</a>
+                    <a href="#guarantee" class="aside__link" data-click="guarantee">03 <span></span> гарантия</a>
                 </li>
                 <li class="aside__item">
-                    <a href="stocks.html" class="aside__link">04 <span></span> акции</a>
+                    <a href="#stocks" class="aside__link" data-click="stocks">04 <span></span> акции</a>
                 </li>
                 <li class="aside__item">
-                    <a href="#" class="aside__link">05 <span></span> цены</a>
+                    <a href="#gallery" class="aside__link" data-click="gallery">05 <span></span> галерея</a>
                 </li>
                 <li class="aside__item">
-                    <a href="gallery.html" class="aside__link">06 <span></span> галерея</a>
-                </li>
-                <li class="aside__item">
-                    <a href="contact.html" class="aside__link">07 <span></span> контакты</a>
+                    <a href="#contact" class="aside__link" data-click="contact">06 <span></span> контакты</a>
                 </li>
             </ul>
             <ul class="aside__list aside__social">
@@ -85,13 +81,14 @@
             </ul>
         </div>
     </aside>
-    <main class="main">
-        <div class="main__wrap wrap__height">
+    <main class="main" >
+        
+        <div id="index" name="index" class="main__wrap wrap__height">
             <img src="image/logo.png" alt="Ремонт телефонов в Пензе" class="menu__logo-main">
             <h2 class="main__tittle">Ремонт телефонов в Пензе<br> с гарантией 6 месяцев</h2>
             <p class="main__info">Оставьте заявку прямо сейчас<br> и получите скидку 10% на ваш заказ. </p>
             <picture class="main__picture">
-                    <div class="owl-carousel owl-theme">
+                    <div class="owl-carousel owl-theme " >
                             <div class="item">
                                 <img class="main__img" src="image/photo/maxresdefault[1].png" alt="ремонт мобильных телефонов">
                             </div>
@@ -102,40 +99,393 @@
                                 <img class="main__img" src="image/photo/maxresdefault[1].png" alt="ремонт мобильных телефонов">
                             </div>
                         </div>
-                <img class="main__scroll" src="image/scroll.png" alt="">
+                        
             </picture>
-            
-            
+            <a href="#services">
+                    <img  class="main__scroll" src="image/scroll.png" alt="">
+                </a>
         </div>
+        
+    
+        <div name="services" id="services" class="main__wrap wrap__services " ">
+            <h2 class="main__tittle">Наши услуги</h2>
+            <p class="main__info">Приносите свой телефон к нам в офис. Причина будет установлена нашими специалистами в кратчайшие сроки, 
+                    после чего мы предложим варианты решения проблемы. Так же вы можете выбрать свой телефон и получить краткую 
+                    информацию по ремонту.</p>
+            <ul class="services__list">
+                <li class="services__item" id="click-apple">
+                    <img src="image/photo/apple.png" alt="" class="services__img" >
+                    <p class="service__info-img">Apple</p>
+                </li>
+                <li class="services__item" id="click-samsung">
+                    <img src="image/photo/samsung.png" alt="" class="services__img" >
+                    <p class="service__info-img">Samsung</p>
+                </li>
+                <li class="services__item" id="click-xiaomi">
+                    <img src="image/photo/xaomi.png" alt="" class="services__img" >
+                    <p class="service__info-img">Xiaomi</p>
+                </li>
+                <li class="services__item" id="click-drugii">
+                    <img src="image/photo/drugii.png" alt="" class="services__img" >
+                    <p class="service__info-img">Другие</p>
+                </li>
+            </ul>
+            <ul class="model__list" id="ml-1">
+                <li class="model__item">4</li>
+                <li class="model__item">4S</li>
+                <li class="model__item">5</li>
+                <li class="model__item">5S</li>
+                <li class="model__item">5C</li>
+                <li class="model__item">6</li>
+                <li class="model__item">6+</li>
+                <li class="model__item">6S</li>
+                <li class="model__item">6S+</li>
+                <li class="model__item">SE</li>
+                <li class="model__item">7</li>
+                <li class="model__item">7+</li>
+                <li class="model__item">8</li>
+                <li class="model__item">8+</li>
+                <li class="model__item">X</li>
+                <li class="model__item">XS</li>
+                <li class="model__item">XS Max</li>
+                <li class="model__item">XR</li>
+            </ul>
+            <ul class="table__list table__position">
+                <li class="table__item"><b>Услуга</b></li>
+                <li class="table__item"><b>Модель</b></li>
+                <li class="table__item"><b>Стоимость</b></li>
+                <li class="table__item"></li>
+            </ul>
+            <ul class="table__list ">
+                <li class="table__item"><input type="text" placeholder="Услуга" size="10"></li>
+                <li class="table__item"><input type="text" placeholder="Модель" size="10"></li>
+                <li class="table__item"><input type="text" placeholder="Стоимость" size="10"></li>
+                <li class="table__item"><button class="table_btn .table_btn--active">Записаться</button></li>
+            </ul>
+            <ul class="table__list ">
+                <li class="table__item"><input type="text" placeholder="Услуга" size="10"></li>
+                <li class="table__item"><input type="text" placeholder="Модель" size="10"></li>
+                <li class="table__item"><input type="text" placeholder="Стоимость" size="10"></li>
+                <li class="table__item"><button class="table_btn">Записаться</button></li>
+            </ul>
+            <ul class="table__list ">
+                <li class="table__item"><input type="text" placeholder="Услуга" size="10"></li>
+                <li class="table__item"><input type="text" placeholder="Модель" size="10"></li>
+                <li class="table__item"><input type="text" placeholder="Стоимость" size="10"></li>
+                <li class="table__item"><button class="table_btn">Записаться</button></li>
+            </ul>
+            <a href="#guarantee">
+                    <img  class="main__scroll" src="image/scroll.png" alt="">
+                </a>
+            </div>
+            <div id="guarantee" class="main__wrap main__wrap-guarant " >
+                <h2 class="main__tittle">Принципы работы</h2>
+                <p class="main__info">Мы уверены в себе и готовы предоставить для Вас лучшие условия в Пензе.</p>
+                <ul class="guarantee__list">
+                    <li class="guarantee__item">
+                        <div class="container__left">
+                                <img src="image/ico/ivo-1.png" alt="" class="guarantee__image">
+                        </div>
+                        <div class="container__right">
+                                <h3 class="guarantee__tittle">Гарантия до 6 месяцев</h3>
+                                <p class="guarantee__info">С уверенностью в своих запчастях и навыках, мы предоставляем самую большую гарантию в городе</p>
+                        </div>
+                    </li>
+                    <li class="guarantee__item">
+                            <div class="container__left">
+                                    <img src="image/ico/ico-2.png" alt="" class="guarantee__image">
+                            </div>
+                            <div class="container__right">
+                                    <h3 class="guarantee__tittle">Бесплатная диагностика</h3>
+                                    <p class="guarantee__info">Диагностика вашего устройства производится абсолютно бесплатно, даже в случае отказа от ремонта.</p>
+                            </div>
+                    </li>
+                    <li class="guarantee__item">
+                            <div class="container__left">
+                                    <img src="image/ico/ico-3.png" alt="" class="guarantee__image">
+                            </div>
+                            <div class="container__right">
+                                    <h3 class="guarantee__tittle">Демократичные цены</h3>
+                                    <p class="guarantee__info">Мы постоянно делаем свои цены актуальными в зависимости от цен конкурентов</p>
+                            </div>
+                    </li>
+                    <li class="guarantee__item">
+                            <div class="container__left">
+                                    <img src="image/ico/ico-4.png" alt="" class="guarantee__image">
+                            </div>
+                            <div class="container__right">
+                                    <h3 class="guarantee__tittle">Запчасти всегда в наличии</h3>
+                                    <p class="guarantee__info">Мы всегда контролируем наличие запчастей на нашем складе.</p>
+                            </div>
+                    </li>
+                    <li class="guarantee__item">
+                            <div class="container__left">
+                                    <img src="image/ico/ico-5.png" alt="" class="guarantee__image">
+                            </div>
+                            <div class="container__right">
+                                    <h3 class="guarantee__tittle">Удобное расположение в центре города</h3>
+                                    <p class="guarantee__info">Наш сервисный центр расположен в центре города с удобной транспортной развязкой и парковочными местами.</p>
+                            </div>
+                    </li>
+                    <li class="guarantee__item">
+                            <div class="container__left">
+                                    <img src="image/ico/ico-6.png" alt="" class="guarantee__image">
+                            </div>
+                            <div class="container__right">
+                                    <h3 class="guarantee__tittle">Комфортная зона ожидания</h3>
+                                    <p class="guarantee__info">Удобный диван, уютный интерьер и чашка кофе. Здесь ваше ожидание пройдет незаметно.</p>
+                            </div>
+                    </li>
+    
+                </ul>   
+                <a href="#stocks">
+                        <img  class="main__scroll" src="image/scroll.png" alt="">
+                    </a> 
+            </div>
+        </section>
+        
+            <div id="stocks" class="main__wrap main__wrap-stocks">
+                <h2 class="main__tittle" style="color: #ffffff">При замене дисплея<br> защитное стекло в подарок</h2>
+                <p class="main__info main__imfo-stocks" style="color: #ffffff">После замены дисплея Вам не стоит переживать, что вы его можете 
+                        поцарапать, не успев выйти из сервиса, у нас для вас есть приятный 
+                        бонус - защитное стекло в подарок. </p>
+                <picture class="main__stocks">
+                        <div class="owl-carousel owl-theme " >
+                                <div class="item">
+                                    <img class="main__img" width="900px" src="image/photo/27330512.png" alt="ремонт мобильных телефонов">
+                                </div>
+                                <div class="item">
+                                    <img class="main__img" width="900px" src="image/photo/27330512.png" alt="ремонт мобильных телефонов">
+                                </div>
+                                <div class="item">
+                                    <img class="main__img" width="900px" src="image/photo/27330512.png" alt="ремонт мобильных телефонов">
+                                </div>
+                                
+                        </div>
+                        
+                </picture>
+               
+                <a href="#mainWrap">
+                        <img  class="main__scroll" src="image/scroll.png" alt="">
+                    </a> 
+            </div>
+            
+            
+            <div class="main__wrap main__gallery" id="gallery">
+                <div class="main__wrap-guarant" id="mainWrap">
+                <h2 class="main__tittle">Галерея славы</h2>
+                <p class="main__info">Вы можете посмотреть на фотографиях процесс нашей работы, а также выполненные работы.</p>
+                <picture class="picture__services">
+                        <div class="owl-carousel-gallery owl-theme services__owl">
+                                <div class="item services_rect" data-app="modal">
+                                        <img class="main__img" src="image/photo/Apple[1].png" alt="ремонт мобильных телефонов">
+                                        <div class="services__wrap">
+                                            <img src="image/ico/Path_49.png" alt="" class="services__ico">
+                                            <p class="services__info">Смотреть<br> галерею</p>
+                                        </div>
+                                    
+                                    <p class="services__title">Как мы это делаем</p>
+                                </div>
+                                <div class="item services_rect" data-app="modal">
+                                    
+                                        <img class="main__img" src="image/photo/i70WAZ26H.png" alt="ремонт мобильных телефонов">
+                                        <div class="services__wrap">
+                                            <img src="image/ico/Path_49.png" alt="" class="services__ico">
+                                            <p class="services__info">Смотреть<br> галерею</p>
+                                        </div>
+                                   
+                                    <p class="services__title">Результаты работы</p>
+                                </div>
+                                <div class="item services_rect" data-app="modal">
+                                  
+                                        <img class="main__img" src="image/photo/1829587373899940_05be[1].png" alt="ремонт мобильных телефонов">
+                                        <div class="services__wrap">
+                                            <img src="image/ico/Path_49.png" alt="" class="services__ico">
+                                            <p class="services__info">Смотреть<br> галерею</p>
+                                        </div>
+                                    
+                                    <p class="services__title">Наш сервис</p>
+                                </div>
+                                <div class="item services_rect" data-app="modal">
+                                    
+                                        <img class="main__img" src="image/photo/orig[3].png" alt="ремонт мобильных телефонов">
+                                        <div class="services__wrap">
+                                            <img src="image/ico/Path_49.png" alt="" class="services__ico">
+                                            <p class="services__info">Смотреть<br> галерею</p>
+                                        </div>
+                                   
+                                    <p class="services__title">Что-то еще</p>
+                                </div>
+                                <div class="item services_rect" data-app="modal">
+                                   
+                                        <img class="main__img" src="image/photo/orig[3].png" alt="ремонт мобильных телефонов">
+                                        <div class="services__wrap">
+                                            <img src="image/ico/Path_49.png" alt="" class="services__ico">
+                                            <p class="services__info">Смотреть<br> галерею</p>
+                                        </div>
+                                    
+                                    <p class="services__title">Что-то еще</p>
+                                </div>
+                                
+                            </div>
+                </picture>
+                </div>
+                <div class="main__wrap main__modal-gallery main__modal-gallery--active" id="mainGallery">
+                        <h3 class="modal__tittle" id="modal__back">Результаты работы</h3>
+                        <ul class="modal__list">
+                            <li class="modal__item">
+                                    <a rel="simplebox" href="image/photo/Apple[1].png">
+                                            <img width="400" src="image/photo/Apple[1].png" />
+                                    </a>
+                            </li>
+                            <li class="modal__item">
+                                    <a rel="simplebox" href="image/photo/i70WAZ26H.png">
+                                        <img width="400" src="image/photo/i70WAZ26H.png" />
+                                </a>
+                            </li>
+                            <li class="modal__item">
+                                    <a rel="simplebox" href="image/photo/i70WAZ26H.png">
+                                        <img width="400" src="image/photo/i70WAZ26H.png" />
+                                </a>
+                            </li>
+                            <li class="modal__item">
+                                    <a rel="simplebox" href="image/photo/i70WAZ26H.png">
+                                        <img width="400" src="image/photo/i70WAZ26H.png" />
+                                </a>
+                            </li>
+                            <li class="modal__item">
+                                    <a rel="simplebox" href="image/photo/i70WAZ26H.png">
+                                        <img width="400" src="image/photo/i70WAZ26H.png" />
+                                </a>
+                            </li>
+                            <li class="modal__item">
+                                    <a rel="simplebox" href="image/photo/i70WAZ26H.png">
+                                        <img width="400" src="image/photo/i70WAZ26H.png" />
+                                </a>
+                            </li>
+                            <li class="modal__item">
+                                    <a rel="simplebox" href="image/photo/i70WAZ26H.png">
+                                        <img width="400" src="image/photo/i70WAZ26H.png" />
+                                </a>
+                            </li>
+                            <li class="modal__item">
+                                    <a rel="simplebox" href="image/photo/i70WAZ26H.png">
+                                        <img width="400" src="image/photo/i70WAZ26H.png" />
+                                </a>
+                            </li>
+                            <li class="modal__item">
+                                    <a rel="simplebox" href="image/photo/i70WAZ26H.png">
+                                        <img width="400" src="image/photo/i70WAZ26H.png" />
+                                </a>
+                            </li>
+                        </ul>
+                </div>
+                    <a href="#contact">
+                            <img  class="main__scroll" src="image/scroll.png" alt="">
+                        </a> 
+            </div>
+            
+            <div class="main__wrap main__contakt" id="contact" >
+                <ul class="contact__list">
+                    <li class="contact__item">
+                        <h2 class="contact__tittle">Связаться с нами</h2>
+                        <p class="contact__info">Наши специалисты всегда проведут телефонные 
+                                консультации по любым вопросам, которые касаются 
+                                ремонта. Просто заполните форму и с Вами свяжутся 
+                                в ближайшее время.</p>
+                                <form action="mail.php" method="POST">
+                                        <div class="form-group">
+                                            <label for="">Ваше имя</label><br>
+                                            <input type="text" size="40" class="form-control" id="" name="user_name" placeholder="Например, Иван">
+                                        </div>
+                                    
+                                        <div class="form-group">
+                                            <label for="">Ваш номер телефона</label><br>
+                                            <input type="text" size="40" class="form-control" id="" name="user_phone" placeholder="+7 (___) ___-__-__">
+                                        </div>
+                                    
+                                        <div class="form-group">
+                                            <label for="">Сообщение (необязательно)</label><br>
+                                            <input type="text" size="40" class="form-control" id="" name="user_text" placeholder="Ваш текст">
+                                        </div>
+                                    
+                                        <button type="submit" class="btn-contact">Отправить форму </button>
+                                    </form>
+                    </li>
+                    <li class="contact__item">
+                        <div class="contaxt__img-container">
+                                <img src="image/photo/cart.png" alt="Как к нам проехать" class="contact__img">
+                        </div>
+                        <ul class="contact-form__list">
+                            <li class="contact-form__item">
+                                <img src="image/photo/wEOVP_03K78[1].png" alt="" class="contact-form__img">
+                            </li>
+                            <li class="contact-form__item">
+                                <img src="image/logo.png" alt="" class="contact-form__logo">
+                                <p class="contact-logo__info">Ремонт мобильных телефонов</p>
+                                <ul class="wrap">
+                                <li>
+                                    <img src="image/ico/gr-1.png" alt="" class="contact__ico">
+                                    <p class="cotact__ico-text">г. Пенза, ул. Суворова, 139</p>
+                                </li>
+                                <li>
+                                    <img src="image/ico/dr-2.png" alt="" class="contact__ico">
+                                    <p class="cotact__ico-text">+7 (8412) 24-28-17</p>
+                                </li>
+                                <li>
+                                    <img src="image/ico/gr-3.png" alt="" class="contact__ico">
+                                    <p class="cotact__ico-text">Пн - Сб: с 10:00 до 19:00</p>
+                                </li>
+                                
+                            </div>
+                            
+                            </li>
+                        </ul>
+                       
+                    </li>
+                </ul>
+                
+            </div>
+            
         <form class="form__main btn__main" action="mail.php" method="POST" id="form-action">
             <ul class="close__list" id="close-form">
                 <li class="close__item"></li>
                 <li class="close__item"></li>
             </ul>
             <div class="form-group form__main-group ">
-                <label for="">Введите ваше имя</label><br>
-                <input type="text" size="40" class="form-control" id="" name="user_name" placeholder="Например, Иван">
+                <label for="">Введите ваше Имя</label><br>
+                <input type="text"  class="form-control" id="" name="user_name" placeholder="Ваш текст">
             </div>
         
             <div class="form-group form__main-group">
-                <label for="">Введите номер телефона</label><br>
-                <input type="text" size="40" class="form-control" id="" name="user_phone" placeholder="+7 (999) 99 99 999">
+                <label for="">Ваш номер телефона</label><br>
+                <input type="text" class="form-control" id="" name="user_phone" placeholder="+7 (___)___-__-__">
             </div>
         
             <div class="form-group form__main-group">
                 <label for="">Введите ваш текст</label><br>
-                <input type="text" size="40" class="form-control" id="" name="user_text" placeholder="Ваш текст">
+                <input type="text"  class="form-control" id="" name="user_text" placeholder="Ваш текст">
             </div>
-            <button type="submit" class="btn-contact footer__bth btn__position " id="btn-action">Отправить форму ></button>
+            <button type="submit" class="btn-contact footer__bth btn__position " id="btn-action">Отправить форму</button>
         </form>
-        <button class="footer__bth btn__position" id="btn-position">оставить заявку <span>></span></button>
-    </main>
-    <footer class="footer">
+        <button class="footer__bth btn__position" id="btn-position">оставить заявку</button>
+        
+        <a id="scrollup"  href="#" class="scrollup">Наверх</a>
+        
+    </main >
+    <footer  class="footer">
         
     </footer>
-    <script src="js/assets/jquery/jquery.min.js"></script>
+    
     <script src="js/assets/owl.carousel/dist/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/assets/animation/wow.min.js"></script>
+    <script type="text/javascript" src="js/assets/simplebox/simplebox_util.js"></script>
+    
+    <script>
+              new WOW().init();
+    </script>
+    
 </body>
 </html>

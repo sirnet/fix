@@ -26,17 +26,15 @@
                 <div class="menu__wrap--active">
                     <ul class="menu__list">
                         <li class="menu__item"><span></span>
-                            <a href="index.html" class="menu__link">Главная</a></li>
-                        <li class="menu__item"><span></span>
-                            <a href="" class="menu__link">Наши цены</a></li>
+                            <a href="index.html#index" class="menu__link">Главная</a></li>
                         <li class="menu__item"><span></span>
                             <a href="faq.html" class="menu__link">FAQ</a></li>
                         <li class="menu__item"><span></span>
                             <a href="articles.html" class="menu__link">Статьи</a></li>
                         <li class="menu__item"><span></span>
-                            <a href="gallery.html" class="menu__link">Галерея</a></li>
+                            <a href="index.html#gallery" class="menu__link">Галерея</a></li>
                         <li class="menu__item"><span></span>
-                            <a href="contact.html" class="menu__link">Контакты</a></li>
+                            <a href="index.html#contact" class="menu__link">Контакты</a></li>
                     </ul>
                     <div class="menu__contact">
                         <h4 class="menu__phone">Телефон // +7(8412)24-28-17</h4>
@@ -52,25 +50,22 @@
             <img src="image/logo.png" alt="Ремонт телефонов в Пензе" class="menu__logo">
             <ul class="aside__list">
                 <li class="aside__item">
-                    <a href="index.html" class="aside__link">01 <span></span> главная</a>
+                    <a href="index.html#index" class="aside__link">01 <span></span> главная</a>
                 </li>
                 <li class="aside__item aside__navigation">
-                    <a href="services.html" class="aside__link">02 <span></span> наши услуги</a>
+                    <a href="index.html#services" class="aside__link">02 <span></span> наши услуги</a>
                 </li>
                 <li class="aside__item">
-                    <a href="guarantee.html" class="aside__link">03 <span></span> гарантия</a>
+                    <a href="index.html#guarantee" class="aside__link">03 <span></span> гарантия</a>
                 </li>
                 <li class="aside__item">
-                    <a href="stocks.html" class="aside__link">04 <span></span> акции</a>
+                    <a href="index.html#stocks" class="aside__link">04 <span></span> акции</a>
                 </li>
                 <li class="aside__item">
-                    <a href="#" class="aside__link">05 <span></span> цены</a>
+                    <a href="index.html#gallery" class="aside__link">05 <span></span> галерея</a>
                 </li>
                 <li class="aside__item">
-                    <a href="gallery.html" class="aside__link">06 <span></span> галерея</a>
-                </li>
-                <li class="aside__item">
-                    <a href="contact.html" class="aside__link">07 <span></span> контакты</a>
+                    <a href="index.html#contact" class="aside__link">06 <span></span> контакты</a>
                 </li>
             </ul>
             <ul class="aside__list aside__social">
@@ -135,27 +130,27 @@
             </ul>
             
         </div>
-        <form class="form__main form__faq" action="mail.php" method="POST" id="form-action">
-            <ul class="close__list" id="close-form">
-                <li class="close__item"></li>
-                <li class="close__item"></li>
-            </ul>
-            <div class="form-group form__main-group ">
-                <label for="">Введите ваше имя</label><br>
-                <input type="text" size="40" class="form-control" id="" name="user_name" placeholder="Например, Иван">
-            </div>
-        
-            <div class="form-group form__main-group">
-                <label for="">Введите номер телефона</label><br>
-                <input type="text" size="40" class="form-control" id="" name="user_phone" placeholder="+7 (999) 99 99 999">
-            </div>
-        
-            <div class="form-group form__main-group">
-                <label for="">Введите ваш текст</label><br>
-                <input type="text" size="40" class="form-control" id="" name="user_text" placeholder="Ваш текст">
-            </div>
-            <button type="submit" class="btn-contact footer__bth btn__position" id="btn-action">Отправить форму ></button>
-        </form>
+        <form class="form__main btn__main" action="mail.php" method="POST" id="form-action">
+                <ul class="close__list" id="close-form">
+                    <li class="close__item"></li>
+                    <li class="close__item"></li>
+                </ul>
+                <div class="form-group form__main-group ">
+                    <label for="">Введите ваше Имя</label><br>
+                    <input type="text"  class="form-control" id="" name="user_name" placeholder="Ваш текст">
+                </div>
+            
+                <div class="form-group form__main-group">
+                    <label for="">Ваш номер телефона</label><br>
+                    <input type="text" class="form-control" id="" name="user_phone" placeholder="+7 (___)___-__-__">
+                </div>
+            
+                <div class="form-group form__main-group">
+                    <label for="">Введите ваш текст</label><br>
+                    <input type="text"  class="form-control" id="" name="user_text" placeholder="Ваш текст">
+                </div>
+                <button type="submit" class="btn-contact footer__bth btn__position " id="btn-action">Отправить форму</button>
+            </form>
         <button class="footer__bth faq__btn" id="btn-position">оставить заявку <span>></span></button>
     </main>
     <footer class="footer">

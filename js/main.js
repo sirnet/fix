@@ -1,3 +1,19 @@
+var owl = $('.owl-carousel-gallery');
+owl.owlCarousel({
+    loop:true,
+    margin:30,
+    autoWidth:true,
+    items:1
+});
+owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+        owl.trigger('next.owl');
+    } else {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
+});
+
 $(function(){
     var burgerList = document.getElementById("burger__List");
     var firstItem = document.getElementById("first");
@@ -56,5 +72,131 @@ $(function(){
         formAction.classList.remove("form__main-action")
         btnClose.classList.remove("btn-action");
     }
-
 });
+
+$(function(){
+    let clickApple = document.getElementById("click-apple");
+    let clickSamsung = document.getElementById("click-samsung");
+    let clickXiaomi = document.getElementById("click-xiaomi");
+    let clickDrugii = document.getElementById("click-drugii");
+
+    let modList = document.getElementById("ml-1");
+
+    clickApple.onclick = function(){
+        clickApple.classList.add("services__item--active")
+        modList.classList.add("model__list--active")
+    }
+
+    clickSamsung.onclick = function(){
+        clickSamsung.classList.add("services__item--active")
+        modList.classList.add("model__list--active")
+    }
+
+    clickXiaomi.onclick = function(){
+        clickXiaomi.classList.add("services__item--active")
+        modList.classList.add("model__list--active")
+    }
+
+    clickDrugii.onclick = function(){
+        clickDrugii.classList.add("services__item--active")
+        modList.classList.add("model__list--active")
+    }
+});
+
+
+$(window).scroll(function(){
+    if ($(this).scrollTop() > 100) {
+    $('.scrollup').fadeIn();
+    } else {
+    $('.scrollup').fadeOut();
+    }
+    });
+
+$('a[href*="#"]').click(function(){
+    elementClick = $(this).attr("href");
+    destination = $(elementClick).offset().top;
+    
+        $('html').animate({scrollTop: destination}, 1000);
+    return false;
+});
+
+ $(document).on("click", ".scrollup", function(e) {
+    e.preventDefault();
+    $('body, html').animate({scrollTop: 0}, 800);
+});
+
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href*="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('scroll-active');
+        })
+        $(this).addClass('scroll-active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#menu-center a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#menu-center ul li a').removeClass("scroll-active");
+            currLink.addClass("scroll-active");
+        }
+        else{
+            currLink.removeClass("scroll-active");
+        }
+    });
+}
+
+$(function(){
+    let modalBack = document.getElementById("modal__back");
+    let mainWrap = document.getElementById("mainWrap");
+    let mainGallery = document.getElementById("mainGallery");
+    let btnClick = document.getElementById("btn_click");
+
+    
+
+    modalBack.onclick = function(){
+        mainWrap.classList.remove("main__wrap--active");
+        mainGallery.classList.add("main__modal-gallery--active");
+        btnClick.classList.remove("visually-hidden");
+    }
+
+    let serviceModal = $("[data-app]");
+    serviceModal.on("click", function(){
+        mainWrap.classList.add("main__wrap--active");
+        mainGallery.classList.remove("main__modal-gallery--active");
+        btnClick.classList.add("visually-hidden");
+    });
+});
+
+$(function(){
+    var boxes=[],els,i,l;
+    if(document.querySelectorAll){
+    els=document.querySelectorAll('a[rel=simplebox]');	
+    Box.getStyles('simplebox_css','js/assets/simplebox/simplebox.css');
+    Box.getScripts('simplebox_js','js/assets/simplebox/simplebox.js',function(){
+    simplebox.init();
+    for(i=0,l=els.length;i<l;++i)
+    simplebox.start(els[i]);
+    simplebox.start('a[rel=simplebox_group]');			
+    });
+    }
+    })();
