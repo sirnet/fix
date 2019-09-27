@@ -8,10 +8,35 @@
     <script src="js/assets/jquery/jquery.min.js"></script>
     <link rel="stylesheet" href="js/assets/owl.carousel/dist/assets/owl.theme.green.css">
     <link rel="stylesheet" href="css/blocks/normalize.css">
-    <link rel="stylesheet" href="css/blocks/animate.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+        <div class="modal__services" id="modal__services">
+                <form class="form__services" action="mail.php" method="POST">
+                    <input type="text" placeholder="Услуга" name="user_usluga" size="10" class="user_usluga">
+                    <input type="text" placeholder="Модель" name="user_model" size="10" class="user_model" id="model-services1">
+                    <input type="text" placeholder="Стоимость" name="user_stoimost" class="user_stoimost" id="model-cart" size="10">
+                    <ul class="close__list service__close">
+                        <li class="close__item"></li>
+                        <li class="close__item"></li>
+                    </ul>
+                    <div class="form-group form__main-group service__group">
+                        <label for="">Введите ваше Имя</label><br>
+                        <input type="text"  class="form-control" id="" name="user_name" placeholder="Ваш текст">
+                    </div>
+                
+                    <div class="form-group form__main-group service__group">
+                        <label for="">Ваш номер телефона</label><br>
+                        <input type="text" class="form-control" id="" name="user_phone" placeholder="+7 (___)___-__-__">
+                    </div>
+                
+                    <div class="form-group form__main-group service__group">
+                        <label for="">Введите ваш текст</label><br>
+                        <input type="text"  class="form-control" id="" name="user_text" placeholder="Ваш текст">
+                    </div>
+                    <button button type="submit" class="services_btn">Отправить форму</button>
+                </form>
+            </div>
     <header class="header">
         <nav class="nav__bar">
             <div class="menu__wrap">
@@ -81,9 +106,9 @@
             </ul>
         </div>
     </aside>
-    <main class="main" >
-        
-        <div id="index" name="index" class="main__wrap wrap__height">
+    <main class="main">
+           
+        <div id="index" name="index" class="main__wrap wrap__height " data-scroll="index">
             <img src="image/logo.png" alt="Ремонт телефонов в Пензе" class="menu__logo-main">
             <h2 class="main__tittle">Ремонт телефонов в Пензе<br> с гарантией 6 месяцев</h2>
             <p class="main__info">Оставьте заявку прямо сейчас<br> и получите скидку 10% на ваш заказ. </p>
@@ -98,39 +123,39 @@
                             <div class="item">
                                 <img class="main__img" src="image/photo/maxresdefault[1].png" alt="ремонт мобильных телефонов">
                             </div>
-                        </div>
+                    </div>
                         
             </picture>
-            <a href="#services">
-                    <img  class="main__scroll" src="image/scroll.png" alt="">
-                </a>
+            
         </div>
-        
     
-        <div name="services" id="services" class="main__wrap wrap__services " ">
+       
+        <div name="services" id="services" class="main__wrap wrap__services" data-scroll="services">
+                
             <h2 class="main__tittle">Наши услуги</h2>
             <p class="main__info">Приносите свой телефон к нам в офис. Причина будет установлена нашими специалистами в кратчайшие сроки, 
                     после чего мы предложим варианты решения проблемы. Так же вы можете выбрать свой телефон и получить краткую 
                     информацию по ремонту.</p>
+        
             <ul class="services__list">
-                <li class="services__item" id="click-apple">
+                <li class="services__item" id="click-apple" data-services="apple">
                     <img src="image/photo/apple.png" alt="" class="services__img" >
                     <p class="service__info-img">Apple</p>
                 </li>
-                <li class="services__item" id="click-samsung">
+                <li class="services__item" id="click-samsung" data-services="samsung">
                     <img src="image/photo/samsung.png" alt="" class="services__img" >
                     <p class="service__info-img">Samsung</p>
                 </li>
-                <li class="services__item" id="click-xiaomi">
+                <li class="services__item" id="click-xiaomi" data-services="xaomi">
                     <img src="image/photo/xaomi.png" alt="" class="services__img" >
                     <p class="service__info-img">Xiaomi</p>
                 </li>
-                <li class="services__item" id="click-drugii">
+                <li class="services__item" id="click-drugii" data-services="drugii">
                     <img src="image/photo/drugii.png" alt="" class="services__img" >
                     <p class="service__info-img">Другие</p>
                 </li>
             </ul>
-            <ul class="model__list" id="ml-1">
+            <ul class="model__list apple__list" id="ml-1" data-model="aplle">
                 <li class="model__item">4</li>
                 <li class="model__item">4S</li>
                 <li class="model__item">5</li>
@@ -150,35 +175,59 @@
                 <li class="model__item">XS Max</li>
                 <li class="model__item">XR</li>
             </ul>
+            <ul class="model__list drugii__list" id="ml-2" data-model="drugii">
+                <li class="model__item">Huawey</li>
+                <li class="model__item">OnePlus</li>
+                <li class="model__item">Sony</li>
+                <li class="model__item">Не Сони</li>
+                <li class="model__item">FLy</li>
+                <li class="model__item">Siemens</li>
+                <li class="model__item">6+</li>
+                <li class="model__item">6S</li>
+                <li class="model__item">6S+</li>
+                <li class="model__item">SE</li>
+                <li class="model__item">7</li>
+                <li class="model__item">7+</li>
+                <li class="model__item">8</li>
+                <li class="model__item">8+</li>
+                <li class="model__item">X</li>
+                <li class="model__item">XS</li>
+                <li class="model__item">XS Max</li>
+                <li class="model__item">XR</li>
+            </ul>
             <ul class="table__list table__position">
                 <li class="table__item"><b>Услуга</b></li>
                 <li class="table__item"><b>Модель</b></li>
                 <li class="table__item"><b>Стоимость</b></li>
                 <li class="table__item"></li>
             </ul>
-            <ul class="table__list ">
-                <li class="table__item"><input type="text" placeholder="Услуга" size="10"></li>
-                <li class="table__item"><input type="text" placeholder="Модель" size="10"></li>
-                <li class="table__item"><input type="text" placeholder="Стоимость" size="10"></li>
-                <li class="table__item"><button class="table_btn .table_btn--active">Записаться</button></li>
+            
+            <ul class="table__list" data-cart="cart">
+                <li class="table__item"><input type="text" placeholder="Услуга" name="user_usluga" size="10"></li>
+                <li class="table__item"><input type="text" placeholder="Модель" name="user_model" size="10" id="model-services2"></li>
+                <li class="table__item"><input type="text" placeholder="Стоимость" name="user_stoimost" id="model-cart" size="10"></li>
+                <li class="table__item"><button button class="table_btn">Записаться</button></li>
             </ul>
-            <ul class="table__list ">
-                <li class="table__item"><input type="text" placeholder="Услуга" size="10"></li>
-                <li class="table__item"><input type="text" placeholder="Модель" size="10"></li>
-                <li class="table__item"><input type="text" placeholder="Стоимость" size="10"></li>
-                <li class="table__item"><button class="table_btn">Записаться</button></li>
-            </ul>
-            <ul class="table__list ">
+           
+            <ul class="table__list" style="display: none">
                 <li class="table__item"><input type="text" placeholder="Услуга" size="10"></li>
                 <li class="table__item"><input type="text" placeholder="Модель" size="10"></li>
                 <li class="table__item"><input type="text" placeholder="Стоимость" size="10"></li>
                 <li class="table__item"><button class="table_btn">Записаться</button></li>
             </ul>
-            <a href="#guarantee">
-                    <img  class="main__scroll" src="image/scroll.png" alt="">
-                </a>
+            <ul class="table__list " style="display: none">
+                <li class="table__item"><input type="text" placeholder="Услуга" size="10"></li>
+                <li class="table__item"><input type="text" placeholder="Модель" size="10"></li>
+                <li class="table__item"><input type="text" placeholder="Стоимость" size="10"></li>
+                <li class="table__item"><button class="table_btn">Записаться</button></li>
+            </ul>
+            
             </div>
-            <div id="guarantee" class="main__wrap main__wrap-guarant " >
+        
+            
+
+       
+            <div data-scroll="guarantee" id="guarantee" class="main__wrap main__wrap-guarant " >
                 <h2 class="main__tittle">Принципы работы</h2>
                 <p class="main__info">Мы уверены в себе и готовы предоставить для Вас лучшие условия в Пензе.</p>
                 <ul class="guarantee__list">
@@ -238,13 +287,11 @@
                     </li>
     
                 </ul>   
-                <a href="#stocks">
-                        <img  class="main__scroll" src="image/scroll.png" alt="">
-                    </a> 
+                
             </div>
-        </section>
         
-            <div id="stocks" class="main__wrap main__wrap-stocks">
+            <div id="stocks" class="main__wrap main__wrap-stocks" data-scroll="stocks">
+                <div class="main__fon-stocls"></div>
                 <h2 class="main__tittle" style="color: #ffffff">При замене дисплея<br> защитное стекло в подарок</h2>
                 <p class="main__info main__imfo-stocks" style="color: #ffffff">После замены дисплея Вам не стоит переживать, что вы его можете 
                         поцарапать, не успев выйти из сервиса, у нас для вас есть приятный 
@@ -252,26 +299,24 @@
                 <picture class="main__stocks">
                         <div class="owl-carousel owl-theme " >
                                 <div class="item">
-                                    <img class="main__img" width="900px" src="image/photo/27330512.png" alt="ремонт мобильных телефонов">
+                                    <img class="main__img"  src="image/photo/27330512.png" alt="ремонт мобильных телефонов">
                                 </div>
                                 <div class="item">
-                                    <img class="main__img" width="900px" src="image/photo/27330512.png" alt="ремонт мобильных телефонов">
+                                    <img class="main__img"  src="image/photo/27330512.png" alt="ремонт мобильных телефонов">
                                 </div>
                                 <div class="item">
-                                    <img class="main__img" width="900px" src="image/photo/27330512.png" alt="ремонт мобильных телефонов">
+                                    <img class="main__img"  src="image/photo/27330512.png" alt="ремонт мобильных телефонов">
                                 </div>
                                 
                         </div>
                         
                 </picture>
                
-                <a href="#mainWrap">
-                        <img  class="main__scroll" src="image/scroll.png" alt="">
-                    </a> 
-            </div>
+                
             
+        </div>
             
-            <div class="main__wrap main__gallery" id="gallery">
+            <div class="main__wrap main__gallery" id="gallery" data-scroll="gallery">
                 <div class="main__wrap-guarant" id="mainWrap">
                 <h2 class="main__tittle">Галерея славы</h2>
                 <p class="main__info">Вы можете посмотреть на фотографиях процесс нашей работы, а также выполненные работы.</p>
@@ -380,12 +425,10 @@
                             </li>
                         </ul>
                 </div>
-                    <a href="#contact">
-                            <img  class="main__scroll" src="image/scroll.png" alt="">
-                        </a> 
+                
             </div>
             
-            <div class="main__wrap main__contakt" id="contact" >
+            <div class="main__wrap main__contakt" id="contact" data-scroll="contact">
                 <ul class="contact__list">
                     <li class="contact__item">
                         <h2 class="contact__tittle">Связаться с нами</h2>
@@ -478,14 +521,10 @@
     </footer>
     
     <script src="js/assets/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/assets/animation/wow.min.js"></script>
+    <script src="js/main.js"></script>
     <script type="text/javascript" src="js/assets/simplebox/simplebox_util.js"></script>
     
-    <script>
-              new WOW().init();
-    </script>
-    
+   
 </body>
 </html>

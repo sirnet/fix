@@ -74,36 +74,6 @@ $(function(){
     }
 });
 
-$(function(){
-    let clickApple = document.getElementById("click-apple");
-    let clickSamsung = document.getElementById("click-samsung");
-    let clickXiaomi = document.getElementById("click-xiaomi");
-    let clickDrugii = document.getElementById("click-drugii");
-
-    let modList = document.getElementById("ml-1");
-
-    clickApple.onclick = function(){
-        clickApple.classList.add("services__item--active")
-        modList.classList.add("model__list--active")
-    }
-
-    clickSamsung.onclick = function(){
-        clickSamsung.classList.add("services__item--active")
-        modList.classList.add("model__list--active")
-    }
-
-    clickXiaomi.onclick = function(){
-        clickXiaomi.classList.add("services__item--active")
-        modList.classList.add("model__list--active")
-    }
-
-    clickDrugii.onclick = function(){
-        clickDrugii.classList.add("services__item--active")
-        modList.classList.add("model__list--active")
-    }
-});
-
-
 $(window).scroll(function(){
     if ($(this).scrollTop() > 100) {
     $('.scrollup').fadeIn();
@@ -199,4 +169,4 @@ $(function(){
     simplebox.start('a[rel=simplebox_group]');			
     });
     }
-    })();
+    });
