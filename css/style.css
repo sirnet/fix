@@ -527,6 +527,10 @@ picture {
     
 }
 
+.wrap__services {
+    margin-bottom: 50px;
+}
+
 .services__owl .owl-stage-outer {
     width: unset;
     display: block; 
