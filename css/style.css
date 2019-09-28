@@ -863,7 +863,7 @@ textarea:focus, input:focus{
 }
 
 .main__stocks .main__img {
-   max-width: 1200px;
+    max-width: 1200px;
     bottom: 0;
 }
 
@@ -1470,6 +1470,10 @@ textarea:focus, input:focus{
 
     .model__list {
         justify-content: center;
+    }
+
+    .main__stocks .main__img {
+        max-width: 900px;
     }
 }
 
