@@ -77,7 +77,7 @@ $(window).scroll(function(){
 
 $('a[href*="#"]').click(function(){
     elementClick = $(this).attr("href");
-    destination = $(elementClick).offset().top;
+    destination = $(elementClick).offset().top+1000;
     
         $('html').animate({scrollTop: destination}, 1000);
     return false;
